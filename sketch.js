@@ -1,5 +1,3 @@
-var ti = performance.now();
-
 var cols = 25;
 var rows = 25;
 
@@ -102,9 +100,6 @@ function Spot(i,j){
 
       if (current === end){
         noSolution = false;
-        var tf = performance.now();
-        console.log(ti, tf, tf-ti); 
-        document.getElementById("time").innerHTML = "Tempo de excução: " + ((tf-ti)/1000).toFixed(2) + "s";
         document.getElementById("resultado").innerHTML = "Resultado: Solução encontrada!";
         document.getElementById("path").innerHTML = "Tamanho do caminho percorrido: " + path.length;
         noLoop();
@@ -130,9 +125,6 @@ function Spot(i,j){
 
     } else {
       noSolution = true;
-      var tf = performance.now();
-      console.log(ti, tf, tf-ti); 
-      document.getElementById("time").innerHTML = "Tempo de excução: " + ((tf-ti)/1000).toFixed(2) + "s";
       document.getElementById("resultado").innerHTML = "Resultado: Sem solução :(";
       document.getElementById("path").innerHTML = "Tamanho do caminho percorrido: 0";
       noLoop();
